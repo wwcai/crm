@@ -9,4 +9,5 @@ com\wwcai\crm\settings\web\controller\UserController.class
 com\wwcai\crm\utils\ServiceFactory.class
 com\wwcai\crm\settings\service\impl\UserServiceImpl.class
 com\wwcai\crm\utils\TransactionInvocationHandler.class
+com\wwcai\crm\exception\LoginException.class
 com\wwcai\crm\settings\dao\UserDao.class

@@ -1,6 +1,7 @@
 package com.wwcai.settings.test;
 
 import com.wwcai.crm.utils.DateTimeUtil;
+import com.wwcai.crm.utils.MD5Util;
 
 
 public class Test {
@@ -37,5 +38,12 @@ public class Test {
         } else {
             System.out.println("无效IP，拒绝访问");
         }
+    }
+
+    @org.junit.Test
+    public void test4() {
+        String password = "123"; 
+        password = MD5Util.getMD5(password);
+        System.out.println(password);
     }
 }
