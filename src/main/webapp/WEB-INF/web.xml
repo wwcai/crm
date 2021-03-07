@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>crm</display-name>
-    <filter>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!--
+    add/create:跳转到添加页，或者打开添加的模态窗口
+    save:执行添加操作
+    edit:跳转到修改页，或者打开修改操作的模态窗口
+    update:执行修改操作
+    get:执行查询操作
+    特殊操作 login等
+  -->
+
+  <filter>
         <filter-name>EncodingFilter</filter-name>
         <filter-class>com.wwcai.crm.web.filter.EncodingFilter</filter-class>
     </filter>
@@ -18,10 +31,8 @@
     <filter-name>EncodingFilter</filter-name>
     <url-pattern>*.do</url-pattern>
   </filter-mapping>
-    <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-  </welcome-file-list>
 
+  <!--用户控制器-->
   <servlet>
     <servlet-name>UserController</servlet-name>
     <servlet-class>com.wwcai.crm.settings.web.controller.UserController</servlet-class>
@@ -31,6 +42,18 @@
     <url-pattern>/settings/user/login.do</url-pattern>
   </servlet-mapping>
 
+  <!--市场活动控制器-->
+  <servlet>
+    <servlet-name>ActivityController</servlet-name>
+    <servlet-class>com.wwcai.crm.workbench.web.controller.ActivityController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityController</servlet-name>
+    <url-pattern>/workbench/activity/getUserList.do</url-pattern>
+    <url-pattern>/workbench/activity/save.do</url-pattern>
+    <url-pattern>/workbench/activity/pageList.do</url-pattern>
+    <url-pattern>/workbench/activity/delete.do</url-pattern>
+  </servlet-mapping>
 </web-app>
 
 

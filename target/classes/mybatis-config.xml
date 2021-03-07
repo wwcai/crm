@@ -14,7 +14,8 @@
   <typeAliases>
   
   	<package name="com.wwcai.crm.settings.domain"/>
-  	
+  	<package name="com.wwcai.crm.workbench.domain"/>
+
   
   </typeAliases>
   
@@ -34,7 +35,8 @@
   <mappers>
    
       <package name="com.wwcai.crm.settings.dao"/>
-    
+      <package name="com.wwcai.crm.workbench.dao"/>
+
   </mappers>
 </configuration>
 

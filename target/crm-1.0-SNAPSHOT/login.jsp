@@ -14,6 +14,11 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 	<script>
 		$(function (){
 
+			if(window.top != window) {
+				window.top.location = window.location;
+			}
+
+
 			// 加载页面 清空文本框
 			$("#loginAct").val("");
 
