@@ -179,8 +179,8 @@ public class ActivityController extends HttpServlet {
         a.setEndDate(endDate);
         a.setCost(cost);
         a.setDescription(description);
-        a.setCreateTime(editTime);
-        a.setCreateBy(editBy);
+        a.setEditTime(editTime);
+        a.setEditBy(editBy);
 
         ActivityService as =
                 (ActivityService) ServiceFactory.getService(new ActivityServiceImpl());
@@ -271,7 +271,7 @@ public class ActivityController extends HttpServlet {
 
     private void save(HttpServletRequest request, HttpServletResponse response) {
 
-        System.out.println("执行市场活动的添加");
+        System.out.println("执行市场活动的更改");
 
         String id = UUIDUtil.getUUID();
         String owner = request.getParameter("owner");
