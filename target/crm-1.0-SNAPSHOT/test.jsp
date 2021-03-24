@@ -31,10 +31,17 @@
     })
 
 
+    $(".time").datetimepicker({
+    minView: "month",
+    language:  'zh-CN',
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    todayBtn: true,
+    pickerPosition: "bottom-left"
+    });
 
-    // 创建时间：当前系统时间
+
     String createTime = DateTimeUtil.getSysTime();
-    // 创建人：当前登录人
     String createBy =
     ((User)request.getSession().getAttribute("user")).getName();
 </body>

@@ -102,11 +102,11 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 				<div class="form-group form-group-lg">
 					<div style="width: 350px;">
 						<input class="form-control" type="text"
-							   placeholder="用户名" id="loginAct">
+							   placeholder="用户名" id="loginAct" >
 					</div>
 					<div style="width: 350px; position: relative;top: 20px;">
 						<input class="form-control" type="password"
-							   placeholder="密码" id="loginPwd">
+							   placeholder="密码" id="loginPwd" >
 					</div>
 					<div class="checkbox"  style="position: relative;top: 30px; left: 10px;">
 						
