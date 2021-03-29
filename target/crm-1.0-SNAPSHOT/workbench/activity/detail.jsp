@@ -507,7 +507,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 		</div>
 		<div style="position: relative; height: 50px; width: 250px;  top: -72px; left: 700px;">
 			<button type="button" id="editBtn" class="btn btn-default"
-                    data-toggle="modal" data-target="#editActivityModal"><span class="glyphicon glyphicon-edit"></span> 编辑</button>
+                    ><span class="glyphicon glyphicon-edit"></span> 编辑</button>
 			<button type="button" id="deleteBtn" class="btn btn-danger"><span
                     class="glyphicon glyphicon-minus"></span> 删除</button>
 		</div>

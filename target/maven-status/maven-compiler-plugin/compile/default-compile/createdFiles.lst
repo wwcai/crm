@@ -24,11 +24,15 @@ com\wwcai\crm\workbench\service\ClueService.class
 com\wwcai\crm\workbench\domain\ActivityRemark.class
 com\wwcai\crm\workbench\dao\ClueActivityRelationDao.class
 com\wwcai\crm\settings\domain\DicValue.class
+com\wwcai\crm\workbench\service\impl\ContactsServiceImpl.class
 com\wwcai\crm\web\filter\LoginFilter.class
 com\wwcai\crm\settings\service\impl\UserServiceImpl.class
+com\wwcai\crm\workbench\service\CustomerService.class
+com\wwcai\crm\workbench\service\impl\CustomerServiceImpl.class
 com\wwcai\crm\settings\dao\UserDao.class
 com\wwcai\crm\vo\PaginationVo.class
 com\wwcai\crm\workbench\domain\Contacts.class
+com\wwcai\crm\workbench\web\controller\TranController.class
 com\wwcai\crm\utils\SqlSessionUtil.class
 com\wwcai\crm\workbench\service\ActivityService.class
 com\wwcai\crm\utils\UUIDUtil.class
@@ -37,6 +41,7 @@ com\wwcai\crm\workbench\domain\TranHistory.class
 com\wwcai\crm\settings\service\UserService.class
 com\wwcai\crm\workbench\dao\TranHistoryDao.class
 com\wwcai\crm\workbench\domain\ContactsRemark.class
+com\wwcai\crm\workbench\service\impl\TranServiceImpl.class
 com\wwcai\crm\utils\ServiceFactory.class
 com\wwcai\crm\utils\TransactionInvocationHandler.class
 com\wwcai\crm\exception\LoginException.class
@@ -45,8 +50,10 @@ com\wwcai\crm\workbench\dao\ContactsDao.class
 com\wwcai\crm\workbench\domain\Customer.class
 com\wwcai\crm\settings\dao\DicValueDao.class
 com\wwcai\crm\workbench\domain\Clue.class
+com\wwcai\crm\workbench\service\TranService.class
 com\wwcai\crm\workbench\domain\Tran.class
 com\wwcai\crm\web\filter\EncodingFilter.class
+com\wwcai\crm\workbench\service\ContactsService.class
 com\wwcai\crm\workbench\dao\ContactsActivityRelationDao.class
 com\wwcai\crm\utils\PrintJson.class
 com\wwcai\crm\settings\web\controller\UserController.class
