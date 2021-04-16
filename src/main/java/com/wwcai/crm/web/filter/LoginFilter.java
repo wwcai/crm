@@ -9,6 +9,17 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class LoginFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
 
         System.out.println("进入验证有没有登录的过滤器");

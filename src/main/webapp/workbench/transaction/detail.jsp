@@ -505,10 +505,10 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 		<div style="position: relative; left: 40px; height: 30px;">
 			<div style="width: 300px; color: gray;">所有者</div>
 			<div style="width: 300px;position: relative; left: 200px; top:
-			-20px;"><b>${t.owner}&nbsp;</b></div>
+			-20px;"><b>${t.owner}&nbsp;&nbsp;&nbsp;</b></div>
 			<div style="width: 300px;position: relative; left: 450px; top: -40px; color: gray;">金额</div>
 			<div style="width: 300px;position: relative; left: 650px; top:
-			-60px;"><b>${t.money}</b></div>
+			-60px;"><b>${t.money}&nbsp;&nbsp;</b></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px;"></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px; left: 450px;"></div>
 		</div>
@@ -517,7 +517,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 			<div style="width: 300px;position: relative; left: 200px; top:
 			-20px;"><b>${t.customerId}-${t.name}</b></div>
 			<div style="width: 300px;position: relative; left: 450px; top: -40px; color: gray;">预计成交日期</div>
-			<div style="width: 300px;position: relative; left: 650px; top: -60px;"><b>${t.expectedDate}</b></div>
+			<div style="width: 300px;position: relative; left: 650px; top: -60px;"><b>${t.expectedDate}&nbsp;&nbsp;</b></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px;"></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px; left: 450px;"></div>
 		</div>
@@ -534,27 +534,27 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 		<div style="position: relative; left: 40px; height: 30px; top: 30px;">
 			<div style="width: 300px; color: gray;">类型</div>
 			<div style="width: 300px;position: relative; left: 200px; top:
-			-20px;"><b>${t.type}</b></div>
+			-20px;"><b>${t.type}&nbsp;&nbsp;</b></div>
 			<div style="width: 300px;position: relative; left: 450px; top: -40px; color: gray;">可能性</div>
 			<div style="width: 300px;position: relative; left: 650px; top:
-			-60px;"><b id="possibility">${t.possibility}</b></div>
+			-60px;"><b id="possibility">${t.possibility}&nbsp;&nbsp;</b></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px;"></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px; left: 450px;"></div>
 		</div>
 		<div style="position: relative; left: 40px; height: 30px; top: 40px;">
 			<div style="width: 300px; color: gray;">来源</div>
 			<div style="width: 300px;position: relative; left: 200px; top:
-			-20px;"><b>${t.source}</b></div>
+			-20px;"><b>${t.source}&nbsp;&nbsp;</b></div>
 			<div style="width: 300px;position: relative; left: 450px; top: -40px; color: gray;">市场活动源</div>
 			<div style="width: 300px;position: relative; left: 650px; top:
-			-60px;"><b>${t.activityId}</b></div>
+			-60px;"><b>${t.activityId}&nbsp;&nbsp;</b></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px;"></div>
 			<div style="height: 1px; width: 400px; background: #D5D5D5; position: relative; top: -60px; left: 450px;"></div>
 		</div>
 		<div style="position: relative; left: 40px; height: 30px; top: 50px;">
 			<div style="width: 300px; color: gray;">联系人名称</div>
 			<div style="width: 500px;position: relative; left: 200px; top:
-			-20px;"><b>${t.contactsId}</b></div>
+			-20px;"><b>${t.contactsId}&nbsp;&nbsp;</b></div>
 			<div style="height: 1px; width: 550px; background: #D5D5D5; position: relative; top: -20px;"></div>
 		</div>
 		<div style="position: relative; left: 40px; height: 30px; top: 60px;">

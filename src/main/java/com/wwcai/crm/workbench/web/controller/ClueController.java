@@ -8,10 +8,7 @@ import com.wwcai.crm.utils.PrintJson;
 import com.wwcai.crm.utils.ServiceFactory;
 import com.wwcai.crm.utils.UUIDUtil;
 import com.wwcai.crm.vo.PaginationVo;
-import com.wwcai.crm.workbench.domain.Activity;
-import com.wwcai.crm.workbench.domain.ActivityRemark;
-import com.wwcai.crm.workbench.domain.Clue;
-import com.wwcai.crm.workbench.domain.Tran;
+import com.wwcai.crm.workbench.domain.*;
 import com.wwcai.crm.workbench.service.ActivityService;
 import com.wwcai.crm.workbench.service.ClueService;
 import com.wwcai.crm.workbench.service.impl.ActivityServiceImpl;
@@ -62,7 +59,100 @@ public class ClueController extends HttpServlet {
             getActivityByName(request, response);
         } else if ("/workbench/clue/convert.do".equals(path)) {
             convert(request, response);
+        } else if ("/workbench/clue/getRemarkListByCid.do".equals(path)) {
+            getRemarkListByCid(request, response);
+        } else if ("/workbench/clue/saveRemark.do".equals(path)) {
+            saveRemark(request, response);
+        }else if ("/workbench/clue/deleteRemark.do".equals(path)) {
+            deleteRemark(request, response);
+        }else if ("/workbench/clue/updateRemark.do".equals(path)) {
+            updateRemark(request, response);
         }
+    }
+
+    private void updateRemark(HttpServletRequest request, HttpServletResponse response) {
+
+        System.out.println("执行修改备注操作");
+
+        String noteContent = request.getParameter("noteContent");
+        String id = request.getParameter("id");
+        String editTime = DateTimeUtil.getSysTime();
+        String editBy =
+                ((User)request.getSession().getAttribute("user")).getName();
+        String editFlag = "1";
+        ClueRemark cr = new ClueRemark();
+        cr.setNoteContent(noteContent);
+        cr.setId(id);
+        cr.setEditFlag(editFlag);
+        cr.setEditBy(editBy);
+        cr.setEditTime(editTime);
+
+        ClueService cs = (ClueService) ServiceFactory.getService(new ClueServiceImpl());
+        boolean flag = cs.updateRemark(cr);
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("success", flag);
+        map.put("cr", cr);
+
+        PrintJson.printJsonObj(response, map);
+    }
+
+    private void deleteRemark(HttpServletRequest request, HttpServletResponse response) {
+
+        System.out.println("删除备注信息");
+
+        String id = request.getParameter("id");
+
+        ClueService cs = (ClueService) ServiceFactory.getService(new ClueServiceImpl());
+
+        boolean flag = cs.deleteRemark(id);
+
+        PrintJson.printJsonFlag(response, flag);
+
+    }
+
+    private void saveRemark(HttpServletRequest request, HttpServletResponse response) {
+
+        System.out.println("执行添加备注操作");
+
+        String noteContent = request.getParameter("noteContent");
+        String clueId = request.getParameter("clueId");
+        String id = UUIDUtil.getUUID();
+        // 创建时间：当前系统时间
+        String createTime = DateTimeUtil.getSysTime();
+        // 创建人：当前登录人
+        String createBy =
+                ((User)request.getSession().getAttribute("user")).getName();
+        String editFlag = "0";
+        ClueRemark cr = new ClueRemark();
+        cr.setNoteContent(noteContent);
+        cr.setClueId(clueId);
+        cr.setId(id);
+        cr.setCreateBy(createBy);
+        cr.setCreateTime(createTime);
+        cr.setEditFlag(editFlag);
+
+        ClueService cs = (ClueService) ServiceFactory.getService(new ClueServiceImpl());
+        boolean flag = cs.saveRemark(cr);
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("success", flag);
+        map.put("cr", cr);
+
+        PrintJson.printJsonObj(response, map);
+    }
+
+    private void getRemarkListByCid(HttpServletRequest request, HttpServletResponse response) {
+
+        System.out.println("根据交易ID获取备注信息");
+
+        String clueId = request.getParameter("clueId");
+
+        ClueService cs = (ClueService) ServiceFactory.getService(new ClueServiceImpl());
+
+        List<ClueRemark> cList = cs.getRemarkListByCid(clueId);
+
+        PrintJson.printJsonObj(response, cList);
     }
 
     private void convert(HttpServletRequest request, HttpServletResponse response) throws IOException {

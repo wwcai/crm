@@ -326,7 +326,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 
 				/*
 					data
-						{"total":10, "datalast":[{市场活动1},...]}
+						{"total":10, "datalist":[{市场活动1},...]}
 							市场活动信息列表
 								[{市场活动1},...]
 							分页插件需要：查询出来的总记录数

@@ -89,7 +89,38 @@
     <url-pattern>/workbench/clue/getActivityByName.do</url-pattern>
     <url-pattern>/workbench/clue/bund.do</url-pattern>
     <url-pattern>/workbench/clue/convert.do</url-pattern>
+    <url-pattern>/workbench/clue/getRemarkListByCid.do</url-pattern>
+    <url-pattern>/workbench/clue/saveRemark.do</url-pattern>
+    <url-pattern>/workbench/clue/updateRemark.do</url-pattern>
+    <url-pattern>/workbench/clue/deleteRemark.do</url-pattern>
 
+  </servlet-mapping>
+
+
+  <!--顾客控制器-->
+  <servlet>
+    <servlet-name>CustomerController</servlet-name>
+    <servlet-class>com.wwcai.crm.workbench.web.controller.CustomerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerController</servlet-name>
+    <url-pattern>/workbench/customer/pageList.do</url-pattern>
+    <url-pattern>/workbench/customer/delete.do</url-pattern>
+    <url-pattern>/workbench/customer/getUserList.do</url-pattern>
+    <url-pattern>/workbench/customer/save.do</url-pattern>
+    <url-pattern>/workbench/customer/getUserListAndCustomer.do</url-pattern>
+    <url-pattern>/workbench/customer/update.do</url-pattern>
+    <url-pattern>/workbench/customer/detail.do</url-pattern>
+  </servlet-mapping>
+
+  <!--联系人控制器-->
+  <servlet>
+    <servlet-name>ContactsController</servlet-name>
+    <servlet-class>com.wwcai.crm.workbench.web.controller.ContactsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactsController</servlet-name>
+    <url-pattern>/workbench/contacts/pageList.do</url-pattern>
   </servlet-mapping>
 
   <!--交易控制器-->
@@ -107,6 +138,7 @@
     <url-pattern>/workbench/transaction/detail.do</url-pattern>
     <url-pattern>/workbench/transaction/getHistoryByTranId.do</url-pattern>
     <url-pattern>/workbench/transaction/changeStage.do</url-pattern>
+    <url-pattern>/workbench/transaction/getCharts.do</url-pattern>
   </servlet-mapping>
 </web-app>
 

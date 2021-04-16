@@ -341,4 +341,50 @@ public class ClueServiceImpl implements ClueService {
 
         return flag;
     }
+
+    @Override
+    public List<ClueRemark> getRemarkListByCid(String clueId) {
+
+        List<ClueRemark> cList = clueRemarkDao.getListById(clueId);
+
+        return cList;
+    }
+
+    @Override
+    public boolean saveRemark(ClueRemark cr) {
+
+        boolean flag = true;
+
+        int count = clueRemarkDao.saveRemark(cr);
+
+        if(count != 1)
+            flag = false;
+
+        return flag;
+    }
+
+    @Override
+    public boolean deleteRemark(String id) {
+
+        boolean flag = true;
+
+        int count = clueRemarkDao.deleteRemark(id);
+
+        if(count != 1)
+            flag = false;
+
+        return flag;
+    }
+
+    @Override
+    public boolean updateRemark(ClueRemark cr) {
+        boolean flag = true;
+
+        int count = clueRemarkDao.updateRemark(cr);
+
+        if(count != 1)
+            flag = false;
+
+        return flag;
+    }
 }

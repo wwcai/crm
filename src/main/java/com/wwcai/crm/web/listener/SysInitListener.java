@@ -49,7 +49,7 @@ public class SysInitListener implements ServletContextListener {
 
         Map<String, String> pMap = new HashMap<>();
 
-        ResourceBundle rb = ResourceBundle.getBundle("Stage2Possibility");
+        ResourceBundle rb = ResourceBundle.getBundle("stage2Possibility");
         Enumeration<String> e = rb.getKeys();
 
         while(e.hasMoreElements()) {

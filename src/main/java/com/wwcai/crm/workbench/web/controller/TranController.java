@@ -18,7 +18,6 @@ import com.wwcai.crm.workbench.service.TranService;
 import com.wwcai.crm.workbench.service.impl.*;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -53,9 +52,22 @@ public class TranController extends HttpServlet {
             getHistoryByTranId(request, response);
         } else if ("/workbench/transaction/changeStage.do".equals(path)) {
             changeStage(request, response);
+        } else if ("/workbench/transaction/getCharts.do".equals(path)) {
+            getCharts(request, response);
         }
 
 
+    }
+
+    private void getCharts(HttpServletRequest request, HttpServletResponse response) {
+
+        System.out.println("取得交易阶段数量统计图标的数据");
+
+        TranService ts = (TranService) ServiceFactory.getService(new TranServiceImpl());
+
+        Map<String, Object> map = ts.getChrats();
+
+        PrintJson.printJsonObj(response, map);
     }
 
     private void changeStage(HttpServletRequest request, HttpServletResponse response) {

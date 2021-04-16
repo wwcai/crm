@@ -11,7 +11,9 @@ import com.wwcai.crm.workbench.domain.Tran;
 import com.wwcai.crm.workbench.domain.TranHistory;
 import com.wwcai.crm.workbench.service.TranService;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TranServiceImpl implements TranService {
 
@@ -123,5 +125,24 @@ public class TranServiceImpl implements TranService {
             flag = false;
 
         return flag;
+    }
+
+    @Override
+    public Map<String, Object> getChrats() {
+
+        // 取得total
+        int total = tranDao.getTotal();
+
+        // 取得dataList
+        List<Map<String, Object>> dataList = tranDao.getCharts();
+
+        // 将total和dataList保存到map中
+        Map<String, Object> map = new HashMap<>();
+        map.put("total", total);
+        map.put("dataList", dataList);
+
+
+
+        return map;
     }
 }

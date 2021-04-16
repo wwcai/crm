@@ -119,7 +119,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 							 	$(dom)
 
 						 */
-						//$("#activityAddForm")[0].reset();
+						$("#activityAddForm")[0].reset();
 
 						// 关闭添加操作的模态窗口
 						$("#createActivityModal").modal("hide");
